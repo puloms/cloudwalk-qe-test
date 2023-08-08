@@ -1,5 +1,6 @@
 require 'debug'
+require './lib/q3_parser.rb'
 
-if File.exist?('./tmp/qgames.log')
-    puts 'File found!'
-end
+parser = Q3_parser.new('./files/qgames.log')
+parser.parse
+debugger
