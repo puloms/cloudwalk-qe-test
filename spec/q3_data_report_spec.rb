@@ -57,7 +57,7 @@ describe Q3_data_report do
             game[:data][:kills] = parsed_kills
 
             data_report = Q3_data_report.new([game]).report
-            expect(data_report["game_1"][:total_kills]).to be_eql 5 
+            expect(data_report.first["game_1"][:total_kills]).to be_eql 5 
         end
         it 'should list players with their kills' do
             parsed_players = []

@@ -5,6 +5,7 @@ describe Q3_parser do
     before do
         allow(File).to receive(:exist?).with('test_file.log').and_return(true)
         allow(File).to receive(:exist?).with('unexisted_test_file.log').and_return(false)
+        allow(File).to receive(:readlines).with('test_file.log').and_return(["  0:00 InitGame: \n"])
     end
 
     context 'log file' do
