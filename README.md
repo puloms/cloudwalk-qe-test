@@ -3,7 +3,7 @@ This is a Quake 3 log parser, as part of Cloudwalk test for Quality Engineering 
 
 ![quake 3](https://media.tenor.com/o0EZph8ggmMAAAAC/carnmode-carnagejohnson.gif)
 # Requirements
-Ruby <= 3
+Ruby (version higher than 3)
 
 # Instalation
 I strongly recommend RVM: https://rvm.io/
