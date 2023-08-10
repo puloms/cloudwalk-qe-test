@@ -8,7 +8,7 @@ Ruby (version higher than 3)
 # Instalation
 I strongly recommend RVM: https://rvm.io/
 
-Just follow the instructions on their site!
+Install it in the link above the follow this [instructions](https://rvm.io/rubies/installing)
 
 ### Then
 
