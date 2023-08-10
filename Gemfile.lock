@@ -1,10 +1,15 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    concurrent-ruby (1.2.2)
     debug (1.8.0)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
     diff-lcs (1.5.0)
+    faker (3.2.0)
+      i18n (>= 1.8.11, < 2)
+    i18n (1.14.1)
+      concurrent-ruby (~> 1.0)
     io-console (0.6.0)
     irb (1.7.4)
       reline (>= 0.3.6)
@@ -28,8 +33,9 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  debug
-  rspec
+  debug (>= 1.0.0)
+  faker (~> 3.2)
+  rspec (~> 3.12)
 
 BUNDLED WITH
-   2.3.7
+   2.4.10
