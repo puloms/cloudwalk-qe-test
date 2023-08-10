@@ -10,6 +10,8 @@ class Q3_data_report
 
     def calculate_report
         @report = []
+        #Run block for each game in parsed info
+        #It'll calculated and return to report
         @games.each do |game|
             @report << calculate(game[:game], game[:data])
         end
@@ -32,6 +34,8 @@ class Q3_data_report
 
     private
 
+    #Used to calculate kills and deaths, since this informations are togheter in parsed info, this method will call
+    #each one separately
     def calculate_kills_and_deaths(data)
         kills = {}
         deaths = {}
@@ -43,7 +47,10 @@ class Q3_data_report
     end
 
     def calculate_kills_for_player(player_id, kills_data)
+        #Second condition here ensures player will not receive a kill count whe kills himself
         kills = kills_data.select{|k| k[:killer_id] == player_id && k[:killer_id] != k[:victim_id]}.length
+
+        #Remove one kill with player died by world
         kills-=kills_data.select{|k| k[:killer_id] == WORLD_ID && k[:victim_id] == player_id}.length
         return kills
     end
