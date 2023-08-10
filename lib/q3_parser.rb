@@ -3,7 +3,7 @@ class Q3_parser
     KILL = /.*Kill: ([0-9]*) ([0-9]*).*: .* killed .* by (.*)\n/
     PLAYER = /.*ClientUserinfoChanged: (\d*) n\\(.*)\\t\\.*$/
 
-    attr_accessor :games
+    attr_reader :games
 
     def initialize(file_path)
         raise "Could not find log file #{file_path}" unless File.exist?(file_path)
